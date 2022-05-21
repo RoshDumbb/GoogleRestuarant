@@ -10,7 +10,7 @@ import Select from "@mui/material/Select";
 // import celebrities from "../celebrities.json";
 import Mockdata from "../data.json";
 import { Avatar, TextField } from "@mui/material";
-
+import { useNavigate } from "react-router-dom";
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
 const MenuProps = {
@@ -36,7 +36,7 @@ function getStyles(name, personName, theme) {
 export default function MultipleSelect() {
   const theme = useTheme();
   const [personName, setPersonName] = React.useState([]);
-
+  const navigate = useNavigate();
   const handleChange = (event) => {
     const {
       target: { value },
@@ -45,13 +45,13 @@ export default function MultipleSelect() {
   };
 
 
-  const searchFood = () => {};
+  
   return (
     <div
       style={{
         backgroundImage:
           "url(" +
-          "https://images.unsplash.com/photo-1640404880570-2b61bf155ebf?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTd8MzQ1NzAzfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500" +
+          "https://images.pexels.com/photos/5946083/pexels-photo-5946083.jpeg" +
           ")",
         backgroundPosition: "center",
         backgroundSize: "cover",
@@ -147,16 +147,10 @@ export default function MultipleSelect() {
       </FormControl>
       <div>
         <button
-          style={{
-            fontFamily: "Droid Sans Mono",
-            width: "200px",
-            height: "40px",
-            borderRadius: "50px",
-            marginTop: "10px",
-          }}
-          onClick={searchFood}
+          onClick={() => navigate("/gog")}
+          className="fluid ui button blue"
         >
-          Search
+          Submit
         </button>
       </div>
     </div>

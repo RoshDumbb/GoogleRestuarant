@@ -1,0 +1,23 @@
+body{
+   background-image: url("https://images.pexels.com/photos/5946083/pexels-photo-5946083.jpeg");
+   background-repeat: no-repeat;
+    /* backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat", */
+        background-size: cover;
+        background-position: center;
+    
+}
+.container{
+    width: 400px;
+    height: 300px;
+    border: 1px solid rebeccapurple;
+    margin: auto;
+    background-color: beige;
+}
+button{
+    color: rgb(202, 193, 193);
+    border-radius: 7px;
+    background-color: black;
+    width: 100px;
+}
